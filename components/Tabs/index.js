@@ -9,18 +9,24 @@
 //    <div class="tab">topic here</div>
 const tabs = document.querySelector('.tabs');
 
-const TabsTopics = (topic) => {
+axios.get('https://lambda-times-backend.herokuapp.com/topics')
+.then(res =>{
+    const data = res.data.topics;
+    data.forEach(topic => {
+        tabs.appendChild(TabsTopics(topic));
+    });
+})
+.catch(err => console.log(err));
 
+console.log(tabs);
+
+const TabsTopics = (topic) => {
     //create element
     const tabs = document.createElement('div');
-
-    //class
+    //set class
     tabs.setAttribute('class', 'tab');
-
     //context - content
     tabs.textContent = topic;
 
     return tabs;
 }
-
-console.log(TabsTopics('test'));
