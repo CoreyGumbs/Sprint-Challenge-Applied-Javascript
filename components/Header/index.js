@@ -28,5 +28,8 @@ function Header() {
     headerDate.setAttribute('class', 'date');
     headerTemp.setAttribute('class', 'temp');
 
+    //append titles to parent div
+    header.append( headerDate, headerTitle, headerTemp);
+
     return header;
 }
