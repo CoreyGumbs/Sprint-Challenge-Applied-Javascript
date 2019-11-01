@@ -13,6 +13,20 @@ const headerContainer = document.querySelector('.header-container');
 console.log(headerContainer);
 
 
+headerContainer.appendChild(Header());
+
 function Header() {
+
     //create elements
+    const header = document.createElement('div');
+    const headerDate = document.createElement('span');
+    const headerTitle = document.createElement('h1');
+    const headerTemp = document.createElement('span');
+
+    //add classes
+    header.setAttribute('class', 'header');
+    headerDate.setAttribute('class', 'date');
+    headerTemp.setAttribute('class', 'temp');
+
+    return header;
 }
