@@ -23,15 +23,23 @@ const topicsArray = [];
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
 .then(response => {
     const data = response.data.articles;
-    const topics = Object.keys(data);
+    const topics = Object.values(data);
 
     //map through each article topic and pull each article from topic
     //then push all articles to an array
-    topics.map( key => {
-        data[key].forEach(topic => {
-            topicsArray.push(topic);
-        })  
-    })
+
+    //const topics = Object.keys(data);
+    // topics.map(key => {
+    //     data[key].forEach(topic => {
+    //         topicsArray.push(topic);
+    //     })  
+    // })
+    topics.forEach(topic =>{
+        topic.forEach(article =>{
+            topicsArray.push(article);
+        });
+    });
+    
 }).then(() => {
     //map through topicsArray and publish each article to component function
     topicsArray.map(topic => {
