@@ -28,6 +28,11 @@ function Header() {
     headerDate.setAttribute('class', 'date');
     headerTemp.setAttribute('class', 'temp');
 
+    //context -  content
+    headerDate.textContent =  'MARCH 29, 2019';
+    headerTitle.textContent = 'Lambda Times';
+    headerTemp.textContent = '98°';
+
     //append titles to parent div
     header.append( headerDate, headerTitle, headerTemp);
 
