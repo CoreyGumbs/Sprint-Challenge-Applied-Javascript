@@ -10,8 +10,6 @@
 // And add it to the DOM in the .header-container component
 
 const headerContainer = document.querySelector('.header-container');
-console.log(headerContainer);
-
 
 headerContainer.appendChild(Header());
 

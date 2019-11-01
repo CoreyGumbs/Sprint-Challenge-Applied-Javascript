@@ -18,8 +18,6 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
 })
 .catch(err => console.log(err));
 
-console.log(tabs);
-
 const TabsTopics = (topic) => {
     //create element
     const tabs = document.createElement('div');
