@@ -9,4 +9,10 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header() {}
+const headerContainer = document.querySelector('.header-container');
+console.log(headerContainer);
+
+
+function Header() {
+    //create elements
+}
