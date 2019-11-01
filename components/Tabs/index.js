@@ -9,14 +9,18 @@
 //    <div class="tab">topic here</div>
 const tabs = document.querySelector('.tabs');
 
-const TabsTopics = () => {
+const TabsTopics = (topic) => {
 
     //create element
     const tabs = document.createElement('div');
 
     //class
+    tabs.setAttribute('class', 'tab');
+
     //context - content
+    tabs.textContent = topic;
+
     return tabs;
 }
 
-console.log(TabsTopics());
+console.log(TabsTopics('test'));
